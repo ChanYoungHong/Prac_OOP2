@@ -10,6 +10,10 @@ class MyMath2 {
 		return a + b; // return this.a + this.b;
 	}
 	
+	long minus() {
+		return a - b;
+	}
+	
 	static long add(long a, long b) { // 클래스 메서드(static 메서드) - this 사용불가
 		return a + b;
 	}
