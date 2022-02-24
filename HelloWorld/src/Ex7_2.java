@@ -1,4 +1,4 @@
-class MyPoint{
+class MyPoint extends Object{
 	int x;
 	int y;
 }
@@ -7,9 +7,13 @@ class MyPoint{
 //	int r;
 //}
 
-class Circle { // 포함
-	MyPoint p = new MyPoint();
+class Circle extends Object { // 포함
+	MyPoint p //= new MyPoint();
 	int r;
+	
+	Circle(){
+		p = new MyPoint();
+	}
 }
 
 
@@ -17,17 +21,12 @@ class Circle { // 포함
 public class Ex7_2 {
 	public static void main(String[] args) {
 		Circle c = new Circle();
-		c.p.x = 1;
-		c.p.y = 2;
-		c.r = 3;
-//		System.out.println(c.x);
-//		System.out.println(c.y);
-//		System.out.println(c.r);
-		
-		System.out.println(c.p.x);
-		System.out.println(c.p.y);
-		System.out.println(c.r);
-
+		System.out.println(c.toString());
+		Circle c2 = new Circle();
+		System.out.println(c2.toString());
 	}
 
 }
+
+
+// toString() -> 문자열을 반환해준 것 
